@@ -21,6 +21,14 @@
     <module>webapp</module>
   </modules>
 
+  <repositories>
+    <repository>
+        <id>central</id>
+        <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
+ </repositories>
+
+
   <distributionManagement>
     <site>
       <id>site-server</id>
@@ -216,7 +224,13 @@
          <artifactId>sonar-maven-plugin</artifactId>
          <version>3.8.0.2131</version>
    </dependency>
-             
+   
+    <dependency>
+        <groupId>com.example</groupId>
+        <artifactId>example-library</artifactId>
+        <version>1.0.0</version>
+    </dependency>
+    
     </dependencies>
   </dependencyManagement>
 
