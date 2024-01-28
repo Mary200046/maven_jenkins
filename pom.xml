@@ -203,8 +203,36 @@
         <version>1.8.5</version>
         <scope>test</scope>
       </dependency>
+
+      <dependency>
+         <groupId>org.sonatype.nexus</groupId>
+         <artifactId>nexus-plugin-api</artifactId>
+         <version>3.52.0-01</version>
+         <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+         <groupId>org.sonarsource.scanner.maven</groupId>
+         <artifactId>sonar-maven-plugin</artifactId>
+         <version>3.8.0.2131</version>
+   </dependency>
+             
     </dependencies>
   </dependencyManagement>
+
+<profiles>
+    <profile>
+         <id>sonar</id>
+         <activation>
+            <activeByDefault>true</activeByDefault>
+         </activation>
+         <properties>
+                  <sonar.host.url>
+                     http://localhost:9000
+                  </sonar.host.url>
+         </properties>
+    </profile>
+</profiles>
 
   <scm>
     <connection>scm:git:git@github.com:jleetutorial/maven-project.git</connection>
